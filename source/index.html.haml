@@ -1,0 +1,19 @@
+.cover
+  .cover-image{style: 'background-image: url(./images/cover.jpg)'}
+  .cover-content
+    .content{ data: {'0' => 'transform: translate3d(0px, 0px, 0px); opacity: 1;', '800' => 'transform: translate3d(0px, 150px, 0px); opacity: 0;'} }
+      %h1
+        Mediumっぽいタイトルでオシャレに演出
+      %h2
+        スクロールすると文字列がちょっと下に移動しつつ薄くなる
+
+.post
+  .post-content
+    %p
+      下にスクロールするにつれて、タイトルがちょっとずつ下に下がって色も薄くなる。これカッコいいなと思って自分でも再現してみた。
+    %p
+      <a href="https://github.com/Prinzhorn/skrollr">skrollr.js</a>を使うとかなり簡単に実現ができる。
+    .fill
+
+:javascript
+  var s = skrollr.init();
